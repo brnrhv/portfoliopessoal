@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useState, useContext, type ReactNode } from 'react';
 import pt from './pt.json';
 import en from './en.json';
