@@ -30,15 +30,16 @@ export const Hero: React.FC = () => {
             <Button variant="primary" onClick={() => window.location.href = '#projects'}>
               {t('hero.cta.projects')}
             </Button>
-            <Button variant="secondary" onClick={() => window.open('https://wa.me/5511900000000', '_blank')}>
+            <Button variant="secondary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
               {t('hero.cta.whatsapp')}
             </Button>
           </div>
         </div>
 
         <div className="hero-visual">
-          <div className="abstract-art">
+          <div className="profile-container">
             <div className="glow-orb"></div>
+            <img src="/profile.jpeg" alt="Henrique Vargas Brenner" className="profile-pic" />
             <div className="glass-panel"></div>
           </div>
         </div>

@@ -39,7 +39,7 @@ export const Projects: React.FC = () => {
              <div className="special-content">
                 <h3 className="display-sm highlight-text">{t('projects.card.custom')}</h3>
                 <p className="mono-text">{t('projects.card.custom.desc')}</p>
-                <Button variant="primary" onClick={() => window.open('https://wa.me/5511900000000', '_blank')} className="full-width mt-auto">
+                <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')} className="full-width mt-auto">
                   {t('hero.cta.whatsapp')}
                 </Button>
              </div>

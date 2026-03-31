@@ -7,8 +7,8 @@ import './About.css';
 export const About: React.FC = () => {
   const { t } = useLanguage();
 
-  const devTech = ['React', 'TypeScript', 'Tailwind', 'Python', 'ASP.NET'];
-  const infraTech = ['Linux', 'NGINX', 'Docker', 'DigitalOcean', 'AWS'];
+  const devTech = ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'ASP.NET', 'SQL'];
+  const infraTech = ['Linux', 'Apache', 'NGINX', 'DNS', 'Email (SMTP/IMAP)', 'SSL', 'cPanel', 'DigitalOcean'];
 
   return (
     <section className="about-section" id="about">

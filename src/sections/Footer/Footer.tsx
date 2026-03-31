@@ -1,9 +1,7 @@
 import React from 'react';
-import { useLanguage } from '../../i18n/LanguageContext';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
-  const { t } = useLanguage();
 
   return (
     <footer className="footer" id="contact">
@@ -11,14 +9,15 @@ export const Footer: React.FC = () => {
         <div className="footer-left">
           <p className="mono-text label-sm mb-2">Socials & Contact</p>
           <div className="footer-links">
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="mailto:contato@henrique.dev">Email</a>
+            <a href="https://www.linkedin.com/in/henriquevbrenner/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/brnrhv/" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.instagram.com/brnrhv/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="mailto:contato@brnrhv.xyz">Email</a>
           </div>
         </div>
         
         <div className="footer-right mono-text label-sm">
-          &copy; {new Date().getFullYear()} HB. {t('footer.copyright')}
+          &copy; {new Date().getFullYear()} Henrique Vargas Brenner.
         </div>
       </div>
     </footer>
