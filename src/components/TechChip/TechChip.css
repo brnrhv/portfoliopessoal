@@ -1,0 +1,10 @@
+.tech-chip {
+  background: var(--color-surface-container-highest);
+  color: var(--color-secondary); /* Neon Green */
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-ghost);
+}

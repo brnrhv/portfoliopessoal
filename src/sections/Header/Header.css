@@ -1,0 +1,73 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: var(--spacing-4) 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.header-scrolled {
+  background: var(--color-surface-lowest-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: var(--border-ghost);
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+
+.logo:hover {
+  filter: drop-shadow(var(--shadow-cyan-glow));
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-6);
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* simple mobile nav approach for now */
+  }
+}
+
+.nav-link {
+  color: var(--color-on-surface);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.lang-toggle {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+}
