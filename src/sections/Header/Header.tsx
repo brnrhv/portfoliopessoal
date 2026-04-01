@@ -26,7 +26,7 @@ export const Header: React.FC = () => {
         <nav className="nav-links">
           <a href="/#about" className="nav-link">{t('header.nav.about')}</a>
           <a href="/#projects" className="nav-link">{t('header.nav.projects')}</a>
-          <Link to="/resume" className="nav-link" style={{color: 'var(--color-primary)'}}>{t('header.nav.resume')}</Link>
+          <Link to="/resume" className="nav-link">{t('header.nav.resume')}</Link>
         </nav>
 
         <div className="header-actions">
