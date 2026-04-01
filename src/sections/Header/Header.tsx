@@ -28,10 +28,11 @@ export const Header: React.FC = () => {
         </nav>
 
         <div className="header-actions">
-          <Button variant="tertiary" onClick={toggleLanguage} className="lang-toggle">
+          <Button variant="secondary" onClick={toggleLanguage} className="lang-toggle" title="Alterar Idioma / Change Language">
+            <span className="lang-icon">🌐</span>
             {language === 'pt' ? 'PT-BR' : 'EN-US'}
           </Button>
-          <Button variant="secondary" onClick={() => window.location.href = '#contact'}>
+          <Button variant="primary" onClick={() => window.location.href = '#contact'}>
             {t('header.nav.contact')}
           </Button>
         </div>
