@@ -22,7 +22,7 @@ export const CTA: React.FC = () => {
             <p className="cta-subhead mb-8">{t('cta.subhead')}</p>
             
             <div className="cta-actions" style={{ flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
-              <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
+              <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848?text=Oi!%20Vi%20seu%20site%20e%20gostaria%20de%20fazer%20uma%20landing%20page.', '_blank')}>
                 {t('cta.btn.whatsapp')}
               </Button>
               <a 

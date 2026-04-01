@@ -1,14 +1,15 @@
 {
   "header.logo.tooltip": "Henrique Vargas Brenner",
-  "header.nav.about": "Services",
-  "header.nav.projects": "Projects",
-  "header.nav.resume": "Resume",
+  "header.nav.about": "How it works",
   "header.nav.contact": "Contact",
   
   "hero.headline": "I build fast and professional landing pages for your business to attract more clients",
-  "hero.subhead": "I handle everything from development to publishing your site to the internet. No hassle, no technical jargon, straight to the point.",
-  "hero.cta.projects": "View Services",
+  "hero.subhead": "I handle everything for you — from development to bringing your site online, without the hassle.",
+  "hero.cta.projects": "See how it works",
   "hero.cta.whatsapp": "Talk to me on WhatsApp",
+  "hero.trust.businesses": "Ideal for small businesses",
+  "hero.trust.simple": "No technical hassle",
+  "hero.trust.fast": "Ready in few days",
   
   "about.title": "About me",
   "about.bio": "I'm Henrique. I build fast, simple websites for companies starting out online, while taking care of all the heavy-lifting technical work in the background.",

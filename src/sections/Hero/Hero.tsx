@@ -33,13 +33,25 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="hero-ctas">
-            <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
+            <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848?text=Oi!%20Vi%20seu%20site%20e%20gostaria%20de%20fazer%20uma%20landing%20page.', '_blank')}>
               {t('hero.cta.whatsapp')}
             </Button>
             <Button variant="secondary" onClick={() => window.location.href = '#about'}>
               {t('hero.cta.projects')}
             </Button>
           </div>
+
+          <motion.div 
+            className="hero-trust-block mono-text label-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1, duration: 0.8 }}
+            style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'var(--color-on-surface-variant)' }}
+          >
+            <span>✔️ {t('hero.trust.businesses')}</span>
+            <span>✔️ {t('hero.trust.simple')}</span>
+            <span>✔️ {t('hero.trust.fast')}</span>
+          </motion.div>
         </motion.div>
 
         <motion.div 

@@ -1,14 +1,15 @@
 {
   "header.logo.tooltip": "Henrique Vargas Brenner",
-  "header.nav.about": "Serviços",
-  "header.nav.projects": "Projetos",
-  "header.nav.resume": "Currículo",
+  "header.nav.about": "Como funciona",
   "header.nav.contact": "Contato",
   
   "hero.headline": "Crio landing pages rápidas e profissionais para o seu negócio gerar mais clientes",
-  "hero.subhead": "Cuido de tudo: do desenvolvimento até a publicação do seu site na internet. Sem complicação, sem termos técnicos, direto ao ponto.",
-  "hero.cta.projects": "Ver Serviços",
+  "hero.subhead": "Eu cuido de tudo para você — do desenvolvimento até colocar seu site no ar, sem complicação.",
+  "hero.cta.projects": "Ver como funciona",
   "hero.cta.whatsapp": "Falar comigo no WhatsApp",
+  "hero.trust.businesses": "Ideal para pequenos negócios",
+  "hero.trust.simple": "Sem complicação técnica",
+  "hero.trust.fast": "Pronto em poucos dias",
   
   "about.title": "Sobre mim",
   "about.bio": "Sou o Henrique. Faço sites simples e rápidos para empresas começarem a captar clientes online, e cuido de toda a parte técnica para elas nos bastidores.",
