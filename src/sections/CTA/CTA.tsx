@@ -21,16 +21,16 @@ export const CTA: React.FC = () => {
             <h2 className="display-sm mb-4">{t('cta.title')}</h2>
             <p className="cta-subhead mb-8">{t('cta.subhead')}</p>
             
-            <div className="cta-actions">
+            <div className="cta-actions" style={{ flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
               <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
                 {t('cta.btn.whatsapp')}
               </Button>
-              <Button variant="secondary" onClick={() => window.location.href = 'mailto:henriquebrenner0@gmail.com'}>
+              <a 
+                href="mailto:henriquebrenner0@gmail.com" 
+                style={{ color: 'var(--color-on-surface-variant)', fontSize: '0.9rem', textDecoration: 'underline' }}
+              >
                 {t('cta.btn.email')}
-              </Button>
-              <Button variant="secondary" onClick={() => window.open('https://www.linkedin.com/in/henrique-vargas-brenner-8710ab23a', '_blank')}>
-                {t('cta.btn.linkedin')}
-              </Button>
+              </a>
             </div>
           </div>
         </motion.div>

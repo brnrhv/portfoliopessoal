@@ -33,11 +33,11 @@ export const Hero: React.FC = () => {
           </p>
 
           <div className="hero-ctas">
-            <Button variant="primary" onClick={() => window.location.href = '#projects'}>
-              {t('hero.cta.projects')}
-            </Button>
-            <Button variant="secondary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
+            <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')}>
               {t('hero.cta.whatsapp')}
+            </Button>
+            <Button variant="secondary" onClick={() => window.location.href = '#about'}>
+              {t('hero.cta.projects')}
             </Button>
           </div>
         </motion.div>
