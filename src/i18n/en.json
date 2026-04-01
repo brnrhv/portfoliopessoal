@@ -3,8 +3,8 @@
   "header.nav.about": "How it works",
   "header.nav.contact": "Contact",
   
-  "hero.headline": "I build fast and professional landing pages for your business to attract more clients",
-  "hero.subhead": "I handle everything for you — from development to bringing your site online, without the hassle.",
+  "hero.headline": "Fast and professional landing pages\nfor your business to grow",
+  "hero.subhead": "I take care of everything — from creation to bringing your site online.",
   "hero.cta.projects": "See how it works",
   "hero.cta.whatsapp": "Talk to me on WhatsApp",
   "hero.trust.businesses": "Ideal for small businesses",
@@ -34,10 +34,9 @@
   "projects.solution": "Solution:",
   "projects.result": "Result:",
 
-  "cta.title": "Need a simple and professional website for your business?",
-  "cta.subhead": "I usually reply within minutes.",
+  "cta.title": "Let's build your site?",
+  "cta.subhead": "Message me on WhatsApp and I'll explain everything quickly.",
   "cta.btn.whatsapp": "Message me on WhatsApp",
-  "cta.btn.email": "Or send an email",
 
   "resume.professional.info.title": "Linux System Administrator | Hosting & Infrastructure",
   "resume.professional.info.location": "Brazil",

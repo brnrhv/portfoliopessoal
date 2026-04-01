@@ -23,15 +23,13 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="display-lg hero-title">
-            {String(t('hero.headline')).split('\n').map((line: string, idx: number) => (
-              <span key={idx} className="title-line">{line}</span>
-            ))}
+            {t('hero.headline')}
           </h1>
           
           <p className="hero-subhead mono-text">
             {t('hero.subhead')}
           </p>
-
+ 
           <div className="hero-ctas">
             <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848?text=Oi!%20Vi%20seu%20site%20e%20gostaria%20de%20fazer%20uma%20landing%20page.', '_blank')}>
               {t('hero.cta.whatsapp')}
@@ -46,7 +44,7 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
-            style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'var(--color-on-surface-variant)' }}
+            style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap', color: 'var(--color-on-surface-variant)', marginTop: '12px' }}
           >
             <span>✔️ {t('hero.trust.businesses')}</span>
             <span>✔️ {t('hero.trust.simple')}</span>
