@@ -32,7 +32,7 @@ export const Resume: React.FC = () => {
           <div className="resume-contact mono-text label-sm mt-4">
             <span>{t('resume.professional.info.location')}</span>
             <span>+55 (54) 99958-0848</span>
-            <span>henrique0848@gmail.com</span>
+            <span>contato@brnrhv.xyz</span>
             <a href="https://linkedin.com/in/henriquevbrenner/" target="_blank" rel="noreferrer" className="hover-link">linkedin.com/in/henriquevbrenner/</a>
           </div>
         </header>

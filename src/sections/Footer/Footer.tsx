@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <a href="https://www.linkedin.com/in/henriquevbrenner/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://github.com/brnrhv/" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.instagram.com/brnrhv/" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="mailto:henriquebrenner0@gmail.com">Email</a>
+            <a href="mailto:contato@brnrhv.xyz">Email</a>
           </div>
         </div>
         
