@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { Button } from '../../components/Button/Button';
 import './Hero.css';
@@ -10,7 +11,12 @@ export const Hero: React.FC = () => {
     <section className="hero" id="hero">
       <div className="hero-container">
         
-        <div className="hero-content">
+        <motion.div 
+          className="hero-content"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="hero-status mono-text label-sm">
             <span className="status-dot"></span>
             System Online
@@ -34,15 +40,20 @@ export const Hero: React.FC = () => {
               {t('hero.cta.whatsapp')}
             </Button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="hero-visual">
+        <motion.div 
+          className="hero-visual"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <div className="profile-container">
             <div className="glow-orb"></div>
             <img src="/profile.jpeg" alt="Henrique Vargas Brenner" className="profile-pic" />
             <div className="glass-panel"></div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

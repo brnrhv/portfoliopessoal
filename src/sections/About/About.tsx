@@ -1,8 +1,24 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { BentoCard } from '../../components/BentoCard/BentoCard';
 import { TechChip } from '../../components/TechChip/TechChip';
 import './About.css';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
 
 export const About: React.FC = () => {
   const { t } = useLanguage();
@@ -13,32 +29,44 @@ export const About: React.FC = () => {
   return (
     <section className="about-section" id="about">
       <div className="section-container">
-        <div className="bento-grid">
+        <motion.div 
+          className="bento-grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           
-          <BentoCard className="bento-bio" glowOnHover>
-            <h2 className="display-sm mb-4">{t('about.title')}</h2>
-            <p className="bio-text">{t('about.bio')}</p>
-          </BentoCard>
+          <motion.div variants={itemVariants} className="bento-wrapper">
+            <BentoCard className="bento-bio" glowOnHover>
+              <h2 className="display-sm mb-4">{t('about.title')}</h2>
+              <p className="bio-text">{t('about.bio')}</p>
+            </BentoCard>
+          </motion.div>
 
-          <BentoCard className="bento-tech-dev">
-            <h3 className="mono-text label-sm mb-4">[{t('about.tech.dev')}]</h3>
-            <div className="tech-chip-container">
-              {devTech.map((tech) => (
-                <TechChip key={tech} label={tech} />
-              ))}
-            </div>
-          </BentoCard>
+          <motion.div variants={itemVariants} className="bento-wrapper">
+            <BentoCard className="bento-tech-dev">
+              <h3 className="mono-text label-sm mb-4">[{t('about.tech.dev')}]</h3>
+              <div className="tech-chip-container">
+                {devTech.map((tech) => (
+                  <TechChip key={tech} label={tech} />
+                ))}
+              </div>
+            </BentoCard>
+          </motion.div>
 
-          <BentoCard className="bento-tech-infra">
-            <h3 className="mono-text label-sm mb-4">[{t('about.tech.infra')}]</h3>
-            <div className="tech-chip-container">
-              {infraTech.map((tech) => (
-                <TechChip key={tech} label={tech} />
-              ))}
-            </div>
-          </BentoCard>
+          <motion.div variants={itemVariants} className="bento-wrapper bento-wrapper-infra">
+            <BentoCard className="bento-tech-infra">
+              <h3 className="mono-text label-sm mb-4">[{t('about.tech.infra')}]</h3>
+              <div className="tech-chip-container">
+                {infraTech.map((tech) => (
+                  <TechChip key={tech} label={tech} />
+                ))}
+              </div>
+            </BentoCard>
+          </motion.div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );
