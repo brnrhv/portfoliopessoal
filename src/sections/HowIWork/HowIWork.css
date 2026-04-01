@@ -1,0 +1,48 @@
+.how-section {
+  padding: var(--spacing-20) 0;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-6);
+  grid-auto-rows: 1fr;
+}
+
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.how-wrapper {
+  display: flex;
+}
+
+.how-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-number {
+  font-size: 3rem;
+  font-weight: 700;
+  opacity: 0.2;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.how-card-title {
+  font-size: 1.25rem;
+  color: var(--color-on-surface);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.how-card-desc {
+  color: var(--color-on-surface-variant);
+  line-height: 1.6;
+}

@@ -23,9 +23,9 @@ const itemVariants = {
 export const Projects: React.FC = () => {
   const { t } = useLanguage();
 
-  const mockProjects = [
-    { id: 1, title: 'Saas Analytics Dashboard', label: 'B2B', tech: 'React / Node' },
-    { id: 2, title: 'E-commerce Infrastructure', label: 'DevOps', tech: 'AWS / Docker' }
+  const projects = [
+    { id: 1 },
+    { id: 2 }
   ];
 
   return (
@@ -49,30 +49,39 @@ export const Projects: React.FC = () => {
           viewport={{ once: true, margin: "-50px" }}
         >
           
-          {mockProjects.map((proj) => (
+          {projects.map((proj) => (
             <motion.div variants={itemVariants} key={proj.id} className="project-wrapper">
               <BentoCard className="project-card" glowOnHover>
-                <div className="project-thumbnail">
-                  <div className="img-placeholder" />
-                  <span className="project-badge mono-text label-sm">{proj.label}</span>
+                <div className="project-header">
+                  <h3 className="project-title">{t(`projects.${proj.id}.title` as any)}</h3>
                 </div>
-                <h3 className="project-title">{proj.title}</h3>
-                <p className="project-tech mono-text">{proj.tech}</p>
                 
-                <div className="project-actions">
-                  <Button variant="secondary" className="full-width">{t('projects.cta.live')}</Button>
+                <div className="project-story">
+                  <div className="story-block">
+                    <span className="story-label mono-text">{t('projects.problem')}</span>
+                    <p>{t(`projects.${proj.id}.problem` as any)}</p>
+                  </div>
+                  <div className="story-block">
+                    <span className="story-label mono-text">{t('projects.solution')}</span>
+                    <p>{t(`projects.${proj.id}.solution` as any)}</p>
+                  </div>
+                  <div className="story-block highlight-block">
+                    <span className="story-label mono-text highlight-text">{t('projects.result')}</span>
+                    <p><strong>{t(`projects.${proj.id}.result` as any)}</strong></p>
+                  </div>
                 </div>
+                
               </BentoCard>
             </motion.div>
           ))}
 
-          {/* Special Marketing Card */}
+          {/* Contact / Custom Project Card */}
           <motion.div variants={itemVariants} className="project-wrapper special-wrapper">
             <BentoCard className="project-card special-card" glowOnHover>
-               <div className="special-content">
-                  <h3 className="display-sm highlight-text">{t('projects.card.custom')}</h3>
-                  <p className="mono-text">{t('projects.card.custom.desc')}</p>
-                  <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')} className="full-width mt-auto">
+               <div className="special-content" style={{justifyContent: 'center', alignItems: 'center', textAlign: 'center'}}>
+                  <h3 className="display-sm highlight-text">100% Uptime</h3>
+                  <p className="mono-text" style={{fontSize: '1.2rem', marginBottom: '2rem'}}>Precisa de uma infra que não cai na Black Friday?</p>
+                  <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848', '_blank')} className="full-width">
                     {t('hero.cta.whatsapp')}
                   </Button>
                </div>

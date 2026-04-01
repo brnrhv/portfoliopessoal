@@ -25,15 +25,27 @@
   grid-row: span 2;
 }
 
-.bento-tech-dev,
-.bento-tech-infra {
+.bento-focus {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.bento-infra,
+.bento-backend {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-perf,
+.bento-email {
   grid-column: span 2;
   grid-row: span 1;
 }
 
 @media (max-width: 900px) {
-  .bento-bio, .bento-tech-dev, .bento-tech-infra {
+  .bento-bio, .bento-focus, .bento-infra, .bento-backend, .bento-perf, .bento-email {
     grid-column: span 4;
+    grid-row: auto;
   }
 }
 
