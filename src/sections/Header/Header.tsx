@@ -16,6 +16,21 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="header-container">
@@ -24,8 +39,8 @@ export const Header: React.FC = () => {
         </Link>
 
         <nav className="nav-links">
-          <a href="/#about" className="nav-link">{t('header.nav.about')}</a>
-          <a href="/#about" className="nav-link">{t('about.title')}</a>
+          <a href="#how-it-works" className="nav-link" onClick={(e) => scrollToSection(e, 'how-it-works')}>{t('header.nav.about')}</a>
+          <a href="#about" className="nav-link" onClick={(e) => scrollToSection(e, 'about')}>{t('about.title')}</a>
         </nav>
 
         <div className="header-actions">
@@ -33,7 +48,7 @@ export const Header: React.FC = () => {
             <span className="lang-icon">🌐</span>
             {language === 'pt' ? 'PT-BR' : 'EN-US'}
           </Button>
-          <Button variant="primary" onClick={() => window.location.href = '/#contact'}>
+          <Button variant="primary" onClick={(e) => scrollToSection(e as any, 'contact')}>
             {t('header.nav.contact')}
           </Button>
         </div>

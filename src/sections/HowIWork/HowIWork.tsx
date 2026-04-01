@@ -25,7 +25,7 @@ export const HowIWork: React.FC = () => {
   const works = ['perf', 'sec', 'scale'];
 
   return (
-    <section className="how-section">
+    <section className="how-section" id="how-it-works">
       <div className="section-container">
         <motion.h2 
           className="display-sm mb-6 section-title align-center"

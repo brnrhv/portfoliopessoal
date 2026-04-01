@@ -19,7 +19,7 @@ export const CTA: React.FC = () => {
         >
           <div className="cta-content">
             <h2 className="display-sm mb-4">{t('cta.title')}</h2>
-            <p className="cta-subhead mb-8">{t('cta.subhead')}</p>
+            <p className="cta-subhead mb-10">{t('cta.subhead')}</p>
             
             <div className="cta-actions">
               <Button variant="primary" onClick={() => window.open('https://wa.me/5554999580848?text=Oi!%20Vi%20seu%20site%20e%20gostaria%20de%20fazer%20uma%20landing%20page.', '_blank')}>
