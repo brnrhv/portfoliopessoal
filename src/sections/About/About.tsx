@@ -38,10 +38,8 @@ export const About: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          
-          <motion.div variants={itemVariants} className="bento-wrapper">
+          <motion.div variants={itemVariants} className="bento-wrapper bento-bio">
             <BentoCard 
-              className="bento-bio" 
               glowOnHover 
               onClick={() => navigate('/resume')}
               style={{ cursor: 'pointer' }}
@@ -55,8 +53,8 @@ export const About: React.FC = () => {
             </BentoCard>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bento-wrapper">
-            <BentoCard className="bento-tech-dev">
+          <motion.div variants={itemVariants} className="bento-wrapper bento-tech-dev">
+            <BentoCard>
               <h3 className="mono-text label-sm mb-4">[{t('about.tech.dev')}]</h3>
               <div className="tech-chip-container">
                 {devTech.map((tech) => (
@@ -66,8 +64,8 @@ export const About: React.FC = () => {
             </BentoCard>
           </motion.div>
 
-          <motion.div variants={itemVariants} className="bento-wrapper bento-wrapper-infra">
-            <BentoCard className="bento-tech-infra">
+          <motion.div variants={itemVariants} className="bento-wrapper bento-tech-infra">
+            <BentoCard>
               <h3 className="mono-text label-sm mb-4">[{t('about.tech.infra')}]</h3>
               <div className="tech-chip-container">
                 {infraTech.map((tech) => (
