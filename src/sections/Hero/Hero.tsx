@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
           </div>
           
           <h1 className="display-lg hero-title">
-            {t('hero.headline').split('\n').map((line, idx) => (
+            {String(t('hero.headline')).split('\n').map((line: string, idx: number) => (
               <span key={idx} className="title-line">{line}</span>
             ))}
           </h1>

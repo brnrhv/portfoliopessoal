@@ -1,0 +1,114 @@
+.resume-page {
+  padding: var(--spacing-20) var(--spacing-6);
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.resume-paper {
+  background: var(--color-surface-container);
+  border: var(--border-ghost);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: var(--shadow-cyan-glow);
+}
+
+.resume-header {
+  text-align: center;
+  border-bottom: 2px solid var(--color-outline-variant);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+.resume-name {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.resume-title {
+  color: var(--color-on-surface-variant);
+  margin-bottom: 1rem;
+}
+
+.resume-contact {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.resume-section-title {
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-outline-variant);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-display);
+}
+
+.resume-item {
+  margin-bottom: 1.5rem;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  flex-wrap: wrap;
+}
+
+.resume-item-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.resume-item-period {
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+}
+
+.resume-item-subtitle {
+  color: var(--color-on-surface-variant);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume-points {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.resume-points li {
+  position: relative;
+  margin-bottom: 0.5rem;
+  color: var(--color-on-surface);
+}
+
+.resume-points li::before {
+  content: "▹";
+  color: var(--color-primary);
+  position: absolute;
+  left: -1rem;
+}
+
+.resume-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.skill-row strong {
+  color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .resume-paper {
+    padding: 1.5rem;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { Button } from '../../components/Button/Button';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 export const Header: React.FC = () => {
@@ -18,13 +19,14 @@ export const Header: React.FC = () => {
   return (
     <header className={`header ${scrolled ? 'header-scrolled' : ''}`}>
       <div className="header-container">
-        <div className="logo mono-text" title={t('header.logo.tooltip')}>
+        <Link to="/" className="logo mono-text" title={t('header.logo.tooltip')}>
           [HB]
-        </div>
+        </Link>
 
         <nav className="nav-links">
-          <a href="#about" className="nav-link">{t('header.nav.about')}</a>
-          <a href="#projects" className="nav-link">{t('header.nav.projects')}</a>
+          <a href="/#about" className="nav-link">{t('header.nav.about')}</a>
+          <a href="/#projects" className="nav-link">{t('header.nav.projects')}</a>
+          <Link to="/resume" className="nav-link" style={{color: 'var(--color-primary)'}}>{t('header.nav.resume')}</Link>
         </nav>
 
         <div className="header-actions">
@@ -32,7 +34,7 @@ export const Header: React.FC = () => {
             <span className="lang-icon">🌐</span>
             {language === 'pt' ? 'PT-BR' : 'EN-US'}
           </Button>
-          <Button variant="primary" onClick={() => window.location.href = '#contact'}>
+          <Button variant="primary" onClick={() => window.location.href = '/#contact'}>
             {t('header.nav.contact')}
           </Button>
         </div>

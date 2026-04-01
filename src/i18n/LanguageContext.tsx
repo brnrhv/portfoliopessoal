@@ -9,7 +9,8 @@ type Translations = typeof pt;
 interface LanguageContextProps {
   language: Language;
   toggleLanguage: () => void;
-  t: (key: keyof Translations) => string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  t: (key: keyof Translations) => any;
 }
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
@@ -26,7 +27,7 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     setLanguage((prev) => (prev === 'pt' ? 'en' : 'pt'));
   };
 
-  const t = (key: keyof Translations): string => {
+  const t = (key: keyof Translations): any => {
     return dictionaries[language][key] || key;
   };
 

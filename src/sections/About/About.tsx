@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { BentoCard } from '../../components/BentoCard/BentoCard';
 import { TechChip } from '../../components/TechChip/TechChip';
+import { useNavigate } from 'react-router-dom';
 import './About.css';
 
 const containerVariants = {
@@ -22,6 +23,7 @@ const itemVariants = {
 
 export const About: React.FC = () => {
   const { t } = useLanguage();
+  const navigate = useNavigate();
 
   const devTech = ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'ASP.NET', 'SQL'];
   const infraTech = ['Linux', 'Apache', 'NGINX', 'DNS', 'Email (SMTP/IMAP)', 'SSL', 'cPanel', 'DigitalOcean'];
@@ -38,8 +40,17 @@ export const About: React.FC = () => {
         >
           
           <motion.div variants={itemVariants} className="bento-wrapper">
-            <BentoCard className="bento-bio" glowOnHover>
-              <h2 className="display-sm mb-4">{t('about.title')}</h2>
+            <BentoCard 
+              className="bento-bio" 
+              glowOnHover 
+              onClick={() => navigate('/resume')}
+              style={{ cursor: 'pointer' }}
+              title="Ir para o currículo / Go to resume"
+            >
+              <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+                <h2 className="display-sm mb-4">{t('about.title')}</h2>
+                <span style={{fontSize: '1.5rem', color: 'var(--color-primary)'}}>↗</span>
+              </div>
               <p className="bio-text">{t('about.bio')}</p>
             </BentoCard>
           </motion.div>
